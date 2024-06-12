@@ -1,36 +1,82 @@
-nav {
-    background-color: #8DB600; /* Couleur vert pomme  on est écolo ;) */
+.navbar {
+    position: relative;
+    background-color: #8DB600;
     padding: 10px;
   }
   
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 5px;
-    font-weight: bold;
-    font-family: 'Arial', sans-serif; /* Choisir une police de caractères */
-    font-size: 1.1em; /* Augmenter la taille de la police */
+  .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: black; /* Couleur blanche pour l'icône */
+    display: none; /* Masquer par défaut pour les grands écrans */
   }
   
-  nav a:hover {
-    color: #FFFF99; /* Couleur survol jaune pâle */
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #8DB600;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: none;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #FFFF99;
+  }
+  
+  .sidenav.open {
+    width: 250px;
+  }
+  
+  .topnav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #8DB600;
+    padding: 10px;
+  }
+  
+  .topnav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1em;
+  }
+  
+  .topnav a:hover {
+    color: #FFFF99;
     text-decoration: underline;
   }
   
   .active {
     border-bottom: 2px solid white;
   }
-
+  
   @media (max-width: 768px) {
-    nav {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+    .menu-icon {
+      display: block;
     }
   
-    nav a {
-      margin: 10px 0;
+    .sidenav {
+      display: block;
+    }
+  
+    .topnav {
+      display: none;
     }
   }
-  
   

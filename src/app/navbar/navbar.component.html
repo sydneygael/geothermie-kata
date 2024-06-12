@@ -1,3 +1,10 @@
-<nav>
-    <a routerLink="/personal-info" routerLinkActive="active">Informations Personnelles</a>
-</nav>
+<div class="navbar">
+    <span class="menu-icon" (click)="toggleMenu()">&#9776;</span>
+    <div class="sidenav" [class.open]="menuOpen">
+      <a routerLink="/personal-info" routerLinkActive="active" (click)="closeMenu()">Informations Personnelles</a>
+    </div>
+    <div class="topnav">
+      <a routerLink="/personal-info" routerLinkActive="active">Informations Personnelles</a>
+    </div>
+  </div>
+  
