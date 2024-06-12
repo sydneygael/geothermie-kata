@@ -1,5 +1,5 @@
 <div class="personal-info-form">
-    <form (ngSubmit)="onSubmit()">
+    <form #personalInfoForm="ngForm" (ngSubmit)="onSubmit(personalInfoForm)">
       <div class="form-group">
         <label for="civilite">Civilité:</label>
         <select id="civilite" [(ngModel)]="personalInfo.civilite" name="civilite" required>
@@ -21,6 +21,9 @@
       <div class="form-group">
         <label for="email">Email:</label>
         <input id="email" type="email" [(ngModel)]="personalInfo.email" name="email" required>
+        <div *ngIf="emailInvalid">
+            <span>Email n'est pas valide</span>
+          </div>
       </div>
   
       <div class="form-group">
