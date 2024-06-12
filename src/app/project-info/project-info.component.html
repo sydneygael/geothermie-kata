@@ -1,0 +1,29 @@
+<div class="project-info-form">
+    <form (ngSubmit)="onSubmit(projectInfoForm)" #projectInfoForm="ngForm">
+      <div class="form-group">
+        <label for="statut">Êtes-vous propriétaire ou locataire?</label>
+        <select id="statut" [(ngModel)]="projectInfo.statut" name="statut" required>
+          <option value="proprietaire">Propriétaire</option>
+          <option value="locataire">Locataire</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="personnes">Nombre de personnes dans le foyer:</label>
+        <input id="personnes" type="number" [(ngModel)]="projectInfo.personnes" name="personnes" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="revenus">Revenus du foyer (en euros):</label>
+        <input id="revenus" type="number" [(ngModel)]="projectInfo.revenus" name="revenus" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="surface">Surface du bien (en m²):</label>
+        <input id="surface" type="number" [(ngModel)]="projectInfo.surface" name="surface" required>
+      </div>
+  
+      <button type="submit" class="submit-button">Suivant</button>
+    </form>
+  </div>
+  

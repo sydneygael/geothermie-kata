@@ -36,6 +36,6 @@ export class PersonalInfoComponent {
     this.emailInvalid = false;
 
     this.dataService.setPersonalInfo(this.personalInfo);
-    //this.router.navigate(['/project-info']);
+    this.router.navigate(['/project-info']);
   }
 }
