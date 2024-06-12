@@ -1,13 +1,15 @@
 nav {
-    background-color: #8DB600; /* Couleur vert pomme */
+    background-color: #8DB600; /* Couleur vert pomme  on est écolo ;) */
     padding: 10px;
   }
   
   nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 5px;
     font-weight: bold;
+    font-family: 'Arial', sans-serif; /* Choisir une police de caractères */
+    font-size: 1.1em; /* Augmenter la taille de la police */
   }
   
   nav a:hover {
@@ -18,4 +20,17 @@ nav {
   .active {
     border-bottom: 2px solid white;
   }
+
+  @media (max-width: 768px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav a {
+      margin: 10px 0;
+    }
+  }
+  
   
