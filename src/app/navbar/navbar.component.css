@@ -1,0 +1,21 @@
+nav {
+    background-color: #8DB600; /* Couleur vert pomme */
+    padding: 10px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #FFFF99; /* Couleur survol jaune pâle */
+    text-decoration: underline;
+  }
+  
+  .active {
+    border-bottom: 2px solid white;
+  }
+  
